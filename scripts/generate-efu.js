@@ -44,7 +44,7 @@ for (const file of files) {
   const relativePath = path.relative(rootDir, file);
   
   // EFU形式から無視したいスクリプト自身と出力先ファイルは除外（任意）
-  if (relativePath === 'catalog.efu') continue;
+  if (relativePath === 'catalog.efu.csv') continue;
 
   const filename = `"${relativePath.replace(/\//g, '\\')}"`;
   const size = stat.size;
@@ -55,5 +55,5 @@ for (const file of files) {
   efu += `${filename},${size},${dateModified},${dateCreated},${attributes}\r\n`;
 }
 
-fs.writeFileSync(path.join(rootDir, 'catalog.efu'), efu);
-console.log('Successfully generated catalog.efu at the repository root.');
+fs.writeFileSync(path.join(rootDir, 'catalog.efu.csv'), efu);
+console.log('Successfully generated catalog.efu.csv at the repository root.');

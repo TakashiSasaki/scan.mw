@@ -13,3 +13,8 @@ public/apple-touch-icon.png
 public/pwa-icon-192.png
 public/pwa-icon-512.png
 public/maskable-icon-512.png
+
+# Agent temporary files
+.agents/cache/
+.agents/tmp/
+.agents/local/

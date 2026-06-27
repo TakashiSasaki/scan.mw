@@ -1,3 +1,21 @@
+# Agent instructions
+
+This repository uses project-specific agent skills.
+
+Canonical skill directory:
+
+- `.agents/skills/`
+
+Before performing a task, check whether a relevant skill exists under `.agents/skills/`.
+
+If a relevant skill exists, read its `SKILL.md` before acting and follow the documented procedure unless there is a clear reason not to.
+
+The skill instructions take precedence over ad-hoc reconstruction of the procedure, but they do not override explicit user instructions, repository safety rules, or security constraints.
+
+Do not expose secrets from `.env`, configuration files, command output, logs, or local credential stores.
+
+When modifying a skill, update the corresponding `SKILL.md` and any related scripts together.
+
 # Developer & AI Agent Guidelines
 
 > **🚨 CRITICAL DIRECTIVE FOR ALL AGENTS 🚨**
